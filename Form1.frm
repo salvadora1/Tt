@@ -1,22 +1,14 @@
 VERSION 5.00
 Begin VB.Form Form1 
    Caption         =   "Form1"
-   ClientHeight    =   6585
+   ClientHeight    =   7710
    ClientLeft      =   120
    ClientTop       =   450
-   ClientWidth     =   6360
+   ClientWidth     =   9915
    LinkTopic       =   "Form1"
-   ScaleHeight     =   6585
-   ScaleWidth      =   6360
+   ScaleHeight     =   7710
+   ScaleWidth      =   9915
    StartUpPosition =   3  'Windows Default
-   Begin VB.CommandButton Command1 
-      Caption         =   "Command1"
-      Height          =   615
-      Left            =   4320
-      TabIndex        =   0
-      Top             =   5640
-      Width           =   1575
-   End
 End
 Attribute VB_Name = "Form1"
 Attribute VB_GlobalNameSpace = False
@@ -24,15 +16,16 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
-
-Private Sub Command1_Click()
-Dim a, b As Double
-a = InputBox("Введите а")
-b = InputBox("Введите b")
-If a < b Then
-MsgBox ("a<b")
-ElseIf a > b Then
-MsgBox ("a>b")
-End If
+Dim n, s As Integer
+Private Sub Form_Load()
+n = Val(InputBox("das"))
+s = Val(InputBox("asdf"))
+Dim class As New class1
+MsgBox (Str(class.Sum(n, s)) + " -Слажение")
+Dim class2 As New class2
+MsgBox (Str(class2.Summ(n, s)) + " -вычетание")
+Dim class3 As New class3
+MsgBox (Str(class3.Suumm(n, s)) + " -Умножение")
+Dim class4 As New class4
+MsgBox (Str(class4.Ssuumm(n, s)) + " -Деление")
 End Sub
- 
